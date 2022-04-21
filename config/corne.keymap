@@ -65,24 +65,24 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | LWR | CMD | SPC |   | ENT | RSE  | ALT |
+//                    | CMD | RSE | SPC |   | ENT | LWR  | ALT |
                         bindings = <
    &kp ESC   &kp Q        &kp W       &kp E       &kp R        &kp T       &kp Y   &kp U        &kp I       &kp O       &kp P           &kp BSPC
-   &kp TAB &bhm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G       &kp H   &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
+   &kp TAB   &bhm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G       &kp H   &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
    &kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B       &kp N   &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                      &kp LCMD    &mo LOWER    &kp SPACE   &kp RET &mo LOWER    &kp LALT
+                                      &kp LCMD    &mo RAISE    &kp SPACE   &kp RET &mo LOWER    &kp LALT
                         >;
                 };
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE |  @  |  &  |  {  |  }  |  *  |   | PGU | LAL  | HOME |  END | LAR   | BSPC |
-// | TAB   |  $  |  %  |  (  |  )  |  =  |   | PGD | LEFT | DOWN |  UP  | RIGHT |  DEL |
+// | GRAVE |  @  |  &  |  {  |  }  |  *  |   | PGU | LAL  | HOME |  END | LAR   |   -  |
+// | LCTRL |  $  |  %  |  (  |  )  |  =  |   | PGD | LEFT | DOWN |  UP  | RIGHT |  DEL |
 // | SHIFT |  ^  |  #  |  [  |  ]  |  !  |   | [{  |  }]  |  ,   |   .  |       | CTRL |
 //                     | LWR | CMD | SPC |   | ENT | RSE  |      |
 			            bindings = <
 	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR      &kp PG_UP  &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp MINUS
-	&kp TAB   &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL       &kp PG_DN  &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp DEL
+	&kp LCTRL &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL       &kp PG_DN  &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp DEL
 	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL      &kp LBKT   &kp RBKT     &kp KP_DOT &kp LS(KP_DOT) &none         &kp RCTRL
                                   &trans   &trans   &trans        &trans     &trans       &trans
 			>;
@@ -90,15 +90,15 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// | GRAVE |  @  |  &  |  {  |  }  |  *  |   |     |  7   |  8   |  9   |     | BTCLR |
+// | BSPC  |  $  |  %  |  (  |  )  |  =  |   |     |  4   |  5   |  6   |     | BT+   |
+// | SHFT  |  ^  |  #  |  [  |  ]  |  !  |   |  0  |  1   |  2   |  3   |     | BT-   |
+//                     | CMD |     | SPC |   | ENT |      |  ALT |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR   &none  &kp N7 &kp N8 &kp N9 &trans &bt BT_CLR
+	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL    &none  &kp N4 &kp N5 &kp N6 &trans &bt BT_NXT
+	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL   &kp N0 &kp N1 &kp N2 &kp N3 &trans &bt BT_PRV
+                    	          &trans   &trans   &kp SPACE  &kp RET   &trans    &kp RALT
                         >;
                 };
         };
