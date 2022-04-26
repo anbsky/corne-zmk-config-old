@@ -62,7 +62,7 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// |  ESC |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // |  TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | CMD | RSE | SPC |   | ENT | LWR  | ALT |
@@ -76,29 +76,43 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE |  @  |  &  |  {  |  }  |  *  |   | PGU | LAL  | HOME |  END | LAR   |   -  |
-// | LCTRL |  $  |  %  |  (  |  )  |  =  |   | PGD | LEFT | DOWN |  UP  | RIGHT |  DEL |
+// | GRAVE |  @  |  &  |  {  |  }  |  *  |   | PGU | LAL  | HOME |  END | LAR   |   _  |
+// | LCTRL |  $  |  %  |  (  |  )  |  =  |   | PGD | LEFT | DOWN |  UP  | RIGHT |   -  |
 // | SHIFT |  ^  |  #  |  [  |  ]  |  !  |   | [{  |  }]  |  ,   |   .  |       | CTRL |
 //                     | LWR | CMD | SPC |   | ENT | RSE  |      |
 			            bindings = <
-	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR      &kp PG_UP  &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp MINUS
-	&kp LCTRL &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL       &kp PG_DN  &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp DEL
+	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR      &kp PG_UP  &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp UNDERSCORE
+	&kp LCTRL &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL       &kp PG_DN  &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp MINUS
 	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL      &kp LBKT   &kp RBKT     &kp KP_DOT &kp LS(KP_DOT) &none         &kp RCTRL
                                   &trans   &trans   &trans        &trans     &trans       &trans
-			>;
-		};
+		            	>;
+		        };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | GRAVE |  @  |  &  |  {  |  }  |  *  |   |     |  7   |  8   |  9   |     | BTCLR |
-// | BSPC  |  $  |  %  |  (  |  )  |  =  |   |     |  4   |  5   |  6   |     | BT+   |
-// | SHFT  |  ^  |  #  |  [  |  ]  |  !  |   |  0  |  1   |  2   |  3   |     | BT-   |
+// | GRAVE |  @  |  &  |  {  |  }  |  *  |   |     |  7   |  8   |  9   |     |      |
+// | BSPC  |  $  |  %  |  (  |  )  |  =  |   |     |  4   |  5   |  6   |     |      |
+// | SHFT  |  ^  |  #  |  [  |  ]  |  !  |   |  0  |  1   |  2   |  3   |     |      |
 //                     | CMD |     | SPC |   | ENT |      |  ALT |
                         bindings = <
-	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR   &none  &kp N7 &kp N8 &kp N9 &trans &bt BT_CLR
-	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL    &none  &kp N4 &kp N5 &kp N6 &trans &bt BT_NXT
-	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL   &kp N0 &kp N1 &kp N2 &kp N3 &trans &bt BT_PRV
+	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR   &none  &kp N7 &kp N8 &kp N9 &trans &trans
+	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL    &none  &kp N4 &kp N5 &kp N6 &trans &trans
+	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL   &kp N0 &kp N1 &kp N2 &kp N3 &trans &trans
                     	          &trans   &trans   &kp SPACE  &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+                adjust_layer {
+// -----------------------------------------------------------------------------------------
+// | GRAVE |  @  |  &  |  {  |  }  |  *  |   | BT+ |      |      |      |     | BTCLR |
+// | BSPC  |  $  |  %  |  (  |  )  |  =  |   | BT- |  BT4 |      |      |     |       |
+// | SHFT  |  ^  |  #  |  [  |  ]  |  !  |   | BT0 |  BT1 |  BT2 |  BT3 |     |       |
+//                     | CMD |     | SPC |   | ENT |      |      |
+                        bindings = <
+	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR     &bt BT_NXT   &none        &none        &none        &none &bt BT_CLR
+	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL      &bt BT_PRV   &bt BT_SEL 4 &none        &none        &none &none
+	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none
+                    	          &trans   &trans   &kp SPACE    &kp RET      &none        &none
                         >;
                 };
         };
