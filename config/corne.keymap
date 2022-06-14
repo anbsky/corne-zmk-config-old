@@ -76,15 +76,15 @@
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | GRAVE |  @  |  &  |  {  |  }  |  *  |   | PGU | LAL  | HOME |  END | LAR   |   _  |
-// | LCTRL |  $  |  %  |  (  |  )  |  =  |   | PGD | LEFT | DOWN |  UP  | RIGHT |   -  |
-// | SHIFT |  ^  |  #  |  [  |  ]  |  !  |   | [{  |  }]  |  ,   |   .  |       | CTRL |
-//                     | LWR | CMD | SPC |   | ENT | RSE  |      |
+// | GRAVE |     |     |     |     |     |   |     | HOME | PGDN | PGUP | END   |   _  |
+// | LCTRL |     |     |     |     |     |   |     | LEFT | DOWN |  UP  | RIGHT |   -  |
+// | SHIFT |     |     |     |     |     |   | [{  |  }]  |  ,   |   .  |       | CTRL |
+//                     | CMD | RSE | SPC |   | ENT | RSE  |      |
 			            bindings = <
-	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR      &kp PG_UP    &kp LA(LEFT) &kp HOME   &kp END        &kp LA(RIGHT) &kp UNDERSCORE
-	&kp LCTRL &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL       &kp PG_DN    &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT     &kp MINUS
-	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL      &kp LBKT     &kp RBKT     &kp KP_DOT &kp LS(KP_DOT) &none         &kp RCTRL
-                                  &trans   &trans   &trans        &kp KP_ENTER &trans       &trans
+	&kp GRAVE &trans &trans &trans &trans &trans    &trans       &kp HOME &kp PG_DN  &kp PG_UP      &kp END   &kp UNDERSCORE
+	&kp LCTRL &trans &trans &trans &trans &trans    &trans       &kp LEFT &kp DOWN   &kp UP         &kp RIGHT &kp MINUS
+	&kp LSHFT &trans &trans &trans &trans &trans    &kp LBKT     &kp RBKT &kp KP_DOT &kp LS(KP_DOT) &none     &kp RCTRL
+                            &trans &trans &trans    &kp KP_ENTER &trans   &trans
 		            	>;
 		        };
 
@@ -93,7 +93,7 @@
 // | GRAVE |  @  |  &  |  {  |  }  |  *  |   |     |  7   |  8   |  9   |     |   _  |
 // | BSPC  |  $  |  %  |  (  |  )  |  =  |   |     |  4   |  5   |  6   |     |   _  |
 // | SHFT  |  ^  |  #  |  [  |  ]  |  !  |   |  0  |  1   |  2   |  3   |     |      |
-//                     | CMD |     | SPC |   | ENT |      |  ALT |
+//                     | CMD |     | SPC |   | ENT |      |      |
                         bindings = <
 	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR   &bt BT_CLR &kp N7 &kp N8 &kp N9 &trans &kp UNDERSCORE
 	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL    &none      &kp N4 &kp N5 &kp N6 &trans &kp MINUS
@@ -110,7 +110,7 @@
 //                     | CMD |     | SPC |   | ENT |      |      |
                         bindings = <
 	&kp GRAVE &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp STAR     &bt BT_NXT   &none        &none        &none        &none &bt BT_CLR
-	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL      &bt BT_PRV   &kp CARET    &none        &none        &none &none
+	&kp BSPC  &kp DLLR  &kp PRCNT &kp LPAR &kp RPAR &kp EQL      &bt BT_PRV   &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP &none &none
 	&kp LSHFT &kp CARET &kp HASH  &kp LBKT &kp RBKT &kp EXCL     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none
                     	          &trans   &trans   &kp SPACE    &kp RET      &none        &none
                         >;
