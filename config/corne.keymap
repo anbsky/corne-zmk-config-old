@@ -65,40 +65,40 @@
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |             |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // |  TAB |  A  |  S  |  D  |  F  |  G  |             |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |             |  N  |  M   |  ,  |  .  |  /  |   \  |
-//                    | CMD | RSE | SPC |             | ENT | LWR  | ALT |
+//                    | CMD | RSE | SPC |             | RET | LWR  |CTRL |
                         bindings = <
-   &kp ESC   &kp Q        &kp W       &kp E       &kp R        &kp T       &kp Y   &kp U        &kp I       &kp O       &kp P           &kp BSPC
-   &kp TAB   &hm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G       &kp H   &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
-   &kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B       &kp N   &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                      &kp LCMD    &mo RAISE    &kp SPACE   &kp RET &mo LOWER    &kp LCTRL
+   &kp ESC   &kp Q        &kp W       &kp E       &kp R        &kp T          &kp Y   &kp U        &kp I       &kp O       &kp P           &kp BSPC
+   &kp TAB   &hm LCTRL A &bhm LALT S &bhm LCMD D &bhm LSHFT F &kp G           &kp H   &bhm RSHFT J &bhm RCMD K &bhm RALT L &bhm RCTRL SEMI &kp SQT
+   &kp LSHFT &kp Z        &kp X       &kp C       &kp V        &kp B          &kp N   &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                      &kp LCMD    &mo RAISE    &kp SPACE      &kp RET &mo LOWER    &kp RCTRL
                         >;
                 };
 
                 lower_layer {
 // ---------------------------------------------------------------------------------------------------------------------------------
-// |  ESC  |  1  |  2   |   3   |   4    |  5     |                               		        |  6  |   7   |    8   |   9    |   0    |   ESC  |
-// | LCTRL |  -  |  &   |   !   |   =    |  _     |                                             |  -  | LEFT  | DOWN   |  UP    | RIGHT  |    -   |
-// | SHIFT |  [  |  ]   |   *   |   {    |  }     |                                             | {[  |   }]  |  ,     |   .    |  >/||  | RSHFT  |
-//                     | CMD | RSE | SPC |        
+// |  ESC  |  1  |  2   |   3   |   4    |  5     |                               		        |  6   |   7   |    8   |   9    |   0    |  ESC  |
+// | LCTRL |  -  |  &   |   !   |   =    |  _     |                                             |  -   | LEFT  | DOWN   |  UP    | RIGHT  |   -   |
+// | SHIFT |  [  |  ]   |   *   |   {    |  }     |                                             | {[   |   }]  |  ,     |   .    |  >/||  | RSHFT |
+//                      |       |        |   DEL  |                                             | PGDN |  LWR  |  PGUP  |  
 			            bindings = <
-	&kp ESC   &kp N1    &kp N2   &kp N3   &kp N4   &kp N5             &kp N6    &kp N7   &kp N8     &kp N9         &kp N0    &kp ESC
-	&kp LCTRL &kp MINUS &kp AMPS &kp EXCL &kp EQL  &kp UNDER          &kp UNDER &kp LEFT &kp DOWN   &kp UP         &kp RIGHT &kp MINUS
-	&kp LSHFT &kp LBKT  &kp RBKT &kp STAR &kp LBRC &kp RBRC           &kp LBKT  &kp RBKT &kp KP_DOT &kp LS(KP_DOT) &kp C_PP  &kp RSHFT
-                                     &trans &trans &trans             &kp PG_DN &kp PG_UP   &trans
+	&kp ESC   &kp N1    &kp N2   &kp N3   &kp N4   &kp N5             &kp N6    &kp N7    &kp N8     &kp N9         &kp N0    &kp ESC
+	&kp LCTRL &kp MINUS &kp AMPS &kp EXCL &kp EQL  &kp UNDER          &kp UNDER &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT &kp MINUS
+	&kp LSHFT &kp LBKT  &kp RBKT &kp STAR &kp LBRC &kp RBRC           &kp LBKT  &kp RBKT  &kp KP_DOT &kp LS(KP_DOT) &kp C_PP  &kp RSHFT
+                                     &trans &trans &kp DEL            &kp PG_DN &trans    &kp PG_UP
 		            	>;
 		        };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | ESC   |  !  |  @   |   #   |   $    |  %    |                         |        |   7  |   8   |   9  |      |   _   |
-// | BSPC  |  (  |  &   |   !   |   =    |  )    |                         |        |   4  |   5   |   6  |      |   -   |
-// | SHIFT |  [  |  ]   |   *   |   {    |  }    |                         |    0   |   1  |    2  |   3  |      | RSHFT |
-//                     | CMD |     | SPC |                                 | RET |      |      |
+// | ESC   |  !  |  @   |   #   |   $    |  %    |                         |       |   7  |   8   |   9  |      |   _   |
+// | BSPC  |  (  |  &   |   :   |   =    |  )    |                         |       |   4  |   5   |   6  |      |   -   |
+// | SHIFT |  [  |  ]   |   *   |   {    |  }    |                         |    0  |   1  |   2   |   3  |      | RSHFT |
+//                      |       |        |   DEL |                         |  ENT  |      |       |
                         bindings = <
-	&kp ESC   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT             &none  &kp N7 &kp N8 &kp N9 &trans &kp UNDERSCORE
-	&kp BSPC  &kp LPAR  &kp AMPS  &kp EXCL  &kp EQL  &kp RPAR              &none  &kp N4 &kp N5 &kp N6 &trans &kp MINUS
-	&kp LSHFT &kp LBKT  &kp RBKT  &kp STAR  &kp LBRC &kp RBRC              &kp N0 &kp N1 &kp N2 &kp N3 &trans &kp RSHFT
-                    	          &trans   &trans   &kp SPACE              &kp RET    &trans    &trans
+	&kp ESC   &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT             &none   &kp N7 &kp N8 &kp N9 &trans &kp UNDERSCORE
+	&kp BSPC  &kp LPAR  &kp AMPS  &kp COLON &kp EQL  &kp RPAR              &none   &kp N4 &kp N5 &kp N6 &trans &kp MINUS
+	&kp LSHFT &kp LBKT  &kp RBKT  &kp STAR  &kp LBRC &kp RBRC              &kp N0  &kp N1 &kp N2 &kp N3 &trans &kp RSHFT
+                    	          &trans    &trans   &kp DEL               &kp KP_ENTER &trans &trans
                         >;
                 };
 
