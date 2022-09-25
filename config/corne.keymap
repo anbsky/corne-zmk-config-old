@@ -91,12 +91,12 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | GRAVE |  !  |  @   |   #   |   $    |  %    |                         |       |   7  |   8   |   9  |      |   _   |
-// | BSPC  |  (  |  &   |   `   |   =    |  )    |                         |       |   4  |   5   |   6  |      |   -   |
+// | BSPC  |  (  |  &   |   ^   |   =    |  )    |                         |       |   4  |   5   |   6  |      |   -   |
 // | SHIFT |  [  |  ]   |   *   |   {    |  }    |                         |    0  |   1  |   2   |   3  |      | RSHFT |
 //                      |       |        |   DEL |                         |  ENT  |      |       |
                         bindings = <
 	&kp GRAVE &kp EXCL  &kp AT    &kp HASH  &kp DLLR &kp PRCNT             &none   &kp N7 &kp N8 &kp N9 &trans &kp UNDERSCORE
-	&kp BSPC  &kp LPAR  &kp AMPS  &kp GRAVE &kp EQL  &kp RPAR              &none   &kp N4 &kp N5 &kp N6 &trans &kp MINUS
+	&kp BSPC  &kp LPAR  &kp AMPS  &kp CARET &kp EQL  &kp RPAR              &none   &kp N4 &kp N5 &kp N6 &trans &kp MINUS
 	&kp LSHFT &kp LBKT  &kp RBKT  &kp STAR  &kp LBRC &kp RBRC              &kp N0  &kp N1 &kp N2 &kp N3 &trans &kp RSHFT
                     	          &trans    &trans   &kp DEL               &kp KP_ENTER &trans &trans
                         >;
