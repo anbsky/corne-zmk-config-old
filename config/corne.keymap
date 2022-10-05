@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "POSITIONAL_HOLD_TAP";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
@@ -92,7 +92,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_LBKT";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp N>, <&kp LBKT>;
         };
 
@@ -100,7 +100,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_RBKT";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&kp M>, <&kp RBKT>;
         };
     };
