@@ -45,7 +45,7 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <39>;
+            hold-trigger-key-positions = <38>;
         };
 
         bhm: balanced_homerow_mods {
@@ -67,16 +67,6 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
             bindings = <&kp>, <&kp>;
-        };
-
-        qtl: quick_tap_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "QUICK_TAP_LAYER";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <125>;
-            bindings = <&lt>, <&kp>;
         };
 
         pht: positional_hold_tap {
@@ -147,10 +137,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |             |  N  |  M   |  ,  |  .  |  /  |   \  |
 //                    | CMD | RSE | SPC |             | RET | LWR  |CTRL |
                         bindings = <
-   &gresc       &kp Q        &kp W       &kp E    &kp R           &kp T          &kp Y    &kp U        &kp I       &kp O       &kp P           &kp BSPC
-   &qt BSPC TAB &hms LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F    &kp G          &kp H    &ptr RSHFT J &ptr RCMD K &ptr RALT L &ptr RCTRL SEMI &kp SQT
-   &kp LSHFT    &kp Z        &kp X       &kp C    &kp V           &kp B          &kp N    &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                         &kp LGUI &qtl RAISE BSPC &kp SPACE      &kp RET  &mo LOWER    &kp RCTRL
+   &gresc       &kp Q        &kp W       &kp E    &kp R        &kp T          &kp Y    &kp U        &kp I       &kp O       &kp P           &kp BSPC
+   &qt BSPC TAB &hms LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F &kp G          &kp H    &ptr RSHFT J &ptr RCMD K &ptr RALT L &ptr RCTRL SEMI &kp SQT
+   &kp LSHFT    &kp Z        &kp X       &kp C    &kp V        &kp B          &kp N    &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                         &kp LGUI &mo RAISE    &kp SPACE      &kp RET  &mo LOWER    &kp RCTRL
                         >;
                 };
 
