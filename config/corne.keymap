@@ -31,7 +31,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -126,10 +126,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |             |  N  |  M   |  ,  |  .  |  /  |   \  |
 //                    | CMD | RSE | SPC |             | RET | LWR  |CTRL |
                         bindings = <
-   &gresc       &kp Q        &kp W       &kp E       &kp R        &kp T          &kp Y    &kp U        &kp I       &kp O       &kp P           &kp BSPC
-   &qt BSPC TAB &pht LCTRL A &pht LALT S &pht LCMD D &pht LSHFT F &kp G          &kp H    &ptr RSHFT J &ptr RCMD K &ptr RALT L &ptr RCTRL SEMI &kp SQT
-   &kp LSHFT    &kp Z        &kp X       &kp C       &kp V        &kp B          &td_lbkt &td_rbkt     &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                         &kp LGUI    &mo RAISE    &kp SPACE      &kp RET  &mo LOWER    &kp RCTRL
+   &gresc       &kp Q        &kp W       &kp E    &kp R       &kp T          &kp Y    &kp U        &kp I       &kp O       &kp P           &kp BSPC
+   &qt BSPC TAB &hm LCTRL A &hm LALT S &hm LCMD D &hm LSHFT F    &kp G          &kp H    &ptr RSHFT J &ptr RCMD K &ptr RALT L &ptr RCTRL SEMI &kp SQT
+   &kp LSHFT    &kp Z        &kp X       &kp C    &kp V          &kp B          &kp N    &kp M        &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                         &kp LGUI &lt RAISE BSPC &kp SPACE      &kp RET  &mo LOWER    &kp RCTRL
                         >;
                 };
 
