@@ -148,13 +148,13 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |  ESC  |  1  |  2   |   3   |   4    |  5     |                               		        |  6   |   7   |    8   |   9    |   0    |  ESC  |
 // | LCTRL |  -  |  &   |   !   |   =    |  _     |                                             |  _   | LEFT  | DOWN   |  UP    | RIGHT  |   -   |
-// | SHIFT |  [  |  ]   |   *   |   {    |  }     |                                             | VOL- | VOL+  |  ,     |   .    |   >||  |  MUTE |
+// | SHIFT |  [  |  ]   |   *   |   {    |  }     |                                             |  {[  |   }]  |  ,     |   .    |   >||  |  MUTE |
 //                      |       |        |   DEL  |                                             | PGDN |  LWR  |  PGUP  |  
 			            bindings = <
-	&kp ESC   &kp N1    &kp N2   &kp N3   &kp N4   &kp N5             &kp N6       &kp N7       &kp N8     &kp N9         &kp N0    &kp ESC
-	&kp LCTRL &kp MINUS &kp AMPS &kp EXCL &kp EQL  &kp UNDER          &kp UNDER    &kp LEFT     &kp DOWN   &kp UP         &kp RIGHT &kp MINUS
-	&kp LSHFT &kp LBKT  &kp RBKT &kp STAR &kp LBRC &kp RBRC           &kp C_VOL_DN &kp C_VOL_UP &kp KP_DOT &kp LS(KP_DOT) &kp C_PP  &kp C_MUTE
-                                     &trans &trans &kp DEL            &kp PG_DN    &trans       &kp PG_UP
+	&kp ESC   &kp N1    &kp N2   &kp N3   &kp N4   &kp N5             &kp N6     &kp N7    &kp N8     &kp N9         &kp N0    &kp ESC
+	&kp LCTRL &kp MINUS &kp AMPS &kp EXCL &kp EQL  &kp UNDER          &kp UNDER  &kp LEFT  &kp DOWN   &kp UP         &kp RIGHT &kp MINUS
+	&kp LSHFT &kp LBKT  &kp RBKT &kp STAR &kp LBRC &kp RBRC           &kp LBKT   &kp RBKT  &kp KP_DOT &kp LS(KP_DOT) &kp C_PP  &kp C_MUTE
+                                     &trans &trans &kp DEL            &kp PG_DN  &trans    &kp PG_UP
 		            	>;
 		        };
 
